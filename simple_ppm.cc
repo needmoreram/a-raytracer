@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Eigen/Core>
 
 int main() {
   int rows = 100;
@@ -8,10 +9,12 @@ int main() {
 
   for (int j = rows - 1; j >= 0; j --) {
     for (int i = 0; i < cols; i ++) {
-      int r = double(i) / double(cols) * double(256);
-      int g = double(j) / double(rows) * double(256);
-      int b = 0.2 * 256;
-      std::cout << r << " " << g << " " << b << "\n";
+      Eigen::Vector3f v(double(i) / double(cols),
+                        double(j) / double(rows),
+                        0.2);
+      std::cout << int(v(0) * 256) << " "
+                << int(v(1) * 256) << " "
+                << int(v(2) * 256) << "\n";
     }
   }
 

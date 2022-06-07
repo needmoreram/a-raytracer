@@ -4,4 +4,7 @@ project('raytracer', 'cpp',
           'warning_level=3'
         ])
 
-executable('simple_ppm', 'simple_ppm.cc')
+eigen_dep = dependency('eigen3')
+
+executable('simple_ppm', 'simple_ppm.cc',
+           dependencies: eigen_dep)
