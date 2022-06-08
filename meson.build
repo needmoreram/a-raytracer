@@ -8,3 +8,6 @@ eigen_dep = dependency('eigen3')
 
 executable('simple_ppm', 'simple_ppm.cc',
            dependencies: eigen_dep)
+
+executable('ray_ppm', 'ray_ppm.cc',
+           dependencies: eigen_dep)
