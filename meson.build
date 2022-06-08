@@ -14,3 +14,6 @@ executable('ray_ppm', 'ray_ppm.cc',
 
 executable('circle_ray', 'circle_ray.cc',
            dependencies: eigen_dep)
+
+executable('shading', 'shading.cc',
+           dependencies: eigen_dep)
