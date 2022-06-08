@@ -11,3 +11,6 @@ executable('simple_ppm', 'simple_ppm.cc',
 
 executable('ray_ppm', 'ray_ppm.cc',
            dependencies: eigen_dep)
+
+executable('circle_ray', 'circle_ray.cc',
+           dependencies: eigen_dep)
